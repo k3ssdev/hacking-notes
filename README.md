@@ -240,6 +240,28 @@ nmap -sn <RANGO DE IPS>
 
 ### Escaneo de puertos y servicios
 
+Script que suelo usar en mi .zshrc
+
+```bash
+nmap_scan() {
+  local ip_address="$1"  # Obtener la dirección IP del primer parámetro
+  
+  if [ -z "$ip_address" ]; then
+    echo "Por favor, proporciona una dirección IP como argumento."
+    exit 1
+  fi
+
+  # Escaneo inicial
+  sudo nmap -sS --min-rate 5000 -p- -Pn -v -oN nmap_inicial "$ip_address"
+  
+  # Procesar la salida del primer escaneo y extraer puertos
+  ports=$(cat nmap_inicial | grep '^[0-9]' | cut -d '/' -f1 | xargs | tr ' ' ',')
+
+  # Escaneo final utilizando los puertos extraídos
+  sudo nmap -p"$ports" -sC -sV -Pn -oN nmap_final "$ip_address"
+}
+```
+
 Para escanear los puertos y servicios de una dirección IP, se pueden utilizar los comandos `nmap` y `rustscan`. Para `nmap`, se pueden utilizar las siguientes opciones:
 
 - `sCV`: realiza una detección de versiones y detección de scripts por defecto

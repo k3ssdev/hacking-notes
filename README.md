@@ -1,7 +1,5 @@
 # Hacking CheatSheet
 
-# Hacking CheatSheet
-
 Este documento contiene información sobre hacking y herramientas para fines educativos y hacking ético. El uso de esta información para actividades ilegales o maliciosas está estrictamente prohibido.
 
 Por favor, utiliza esta información de forma ética y responsable.

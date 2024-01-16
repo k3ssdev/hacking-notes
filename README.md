@@ -27,19 +27,6 @@ A list of useful payloads and bypasses for Web Application Security.
 
 [**Anonimizar el tráfico de Linux con ProxyChains y Tor**](https://www.notion.so/Anonimizar-el-tr-fico-de-Linux-con-ProxyChains-y-Tor-038cc9cae758418da89b20371324814f?pvs=21)
 
-### Operadores linux
-
-La tabla muestra una lista de operadores de Linux y su función.
-
-| Operador | Función |
-| --- | --- |
-| ~ | Apunta al directorio home del usuario actual |
-| $() | Apunta a una variable del SO |
-| | | Redirige la salida del comando anterior al siguiente |
-| & | Ejecuta ambos comandos independientemente del resultado |
-| && | Ejecuta el segundo comando solo si el primero tiene éxito (retorno de cero) |
-
-## Basics
 
 ### Operadores linux
 

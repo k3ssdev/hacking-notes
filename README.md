@@ -1,8 +1,8 @@
 # Hacking CheatSheet
 
-Este documento contiene información sobre hacking y herramientas para fines educativos y hacking ético. El uso de esta información para actividades ilegales o maliciosas está estrictamente prohibido.
+Este documento es un recopilatorio de todas las notas que he ido tomando mientras resolvía salas de TryHackMe o diferentes retos, ya sea con lo aprendido en las propias rooms de THM como lo que he ido encontrado en diferentes blogs y webs mientras buscaba.
 
-Por favor, utiliza esta información de forma ética y responsable.
+Si vas a utilizar la información que he recopilado aqui, hazlo de forma ética y responsable.
 
 by **k3ssdev**
 
@@ -15,9 +15,9 @@ Este documento contiene información sobre hacking y herramientas para fines edu
 
 Se reconoce y agradece el trabajo de los creadores de estas páginas por proporcionar información valiosa para la comunidad de seguridad informática, sin su trabajo y su ejemplo este documento no existiría.
 
-## Basics
+## Basicos
 
-A list of useful payloads and bypasses for Web Application Security.
+Listado de paylods útiles y bypasses para seguridad de aplciaciones web.
 
 [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 

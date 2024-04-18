@@ -13,7 +13,7 @@ Este documento contiene información sobre hacking y herramientas para fines edu
 - [https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets](https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets)
 - [https://hack.xero-sec.com/](https://hack.xero-sec.com/)
 
-Se reconoce y agradece el trabajo de los creadores de estas páginas por proporcionar información valiosa para la comunidad de seguridad informática, sin su trabajo y su ejemplo este documento no existiría.
+Quiero reconocer y agradecer el trabajo de los creadores de estas páginas por proporcionar información valiosa abierta a toda la comunidad, sin su trabajo y su ejemplo este documento no sería posible.
 
 ## Basicos
 

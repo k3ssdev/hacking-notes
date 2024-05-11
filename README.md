@@ -34,12 +34,12 @@ La tabla muestra una lista de operadores de Linux y su función.
 
 | Operador | Función |
 | --- | --- |
-| ~ | Apunta al directorio home del usuario actual |
-| $() | Apunta a una variable del SO |
-| | | Redirige la salida del comando anterior al siguiente |
-| || | Ejecuta el primer comando y, si falla, ejecuta el segundo |
-| & | Ejecuta ambos comandos independientemente del resultado |
-| && | Ejecuta el primer comando y, si tiene éxito, ejecuta el segundo |
+| `~` | Apunta al directorio home del usuario actual |
+| `$()` | Apunta a una variable del SO |
+| `\|` | Redirige la salida del comando anterior al siguiente |
+| `\|\|` | Ejecuta el primer comando y, si falla, ejecuta el segundo |
+| `&` | Ejecuta ambos comandos independientemente del resultado |
+| `&&` | Ejecuta el primer comando y, si tiene éxito, ejecuta el segundo |
 
 ### Tratamiento de la TTY
 
@@ -57,7 +57,48 @@ export SHELL=bash # Asigna bash a la variable SHELL
 stty rows <VALOR_FILAS> columns <VALOR_COLUMNAS>
 ```
 
-La *pseudoconsola* es útil en hacking para ejecutar comandos de forma discreta y persistente en una máquina remota. Por ejemplo, si no se puede abrir una sesión de terminal directamente en la máquina remota, se puede utilizar la *pseudoconsola* para ejecutar comandos sin ser detectado. También se puede utilizar para establecer conexiones persistentes en caso de desconexiones accidentales.
+La *pseudoconsola* es útil en hacking para ejecutar comandos de forma discreta y persistente en una máquina remota. Por ejemplo, si no se puede abrir una sesión de terminal directamente en la máquina remota, se puede utilizar la *pseudoconsola* para ejecutar comandos sin ser detectado. También se puede utilizar para establecer conexiones persistentes en caso de desconexiones accidentales.\
+
+### Manipulación de texto
+
+#### Comando `sed`
+
+1. **Eliminar líneas vacías de un archivo:**
+   ```bash
+   sed '/^$/d' archivo.txt
+   ```
+   Esto eliminará todas las líneas vacías del archivo `archivo.txt`.
+
+2. **Eliminar comentarios de un archivo de configuración (líneas que comienzan con `#`):**
+   ```bash
+   sed '/^#/d' archivo.conf
+   ```
+   Esto eliminará todas las líneas que comiencen con `#` del archivo de configuración `archivo.conf`.
+
+3. **Reemplazar una palabra específica en un archivo:**
+   ```bash
+   sed 's/palabra_a_reemplazar/nueva_palabra/g' archivo.txt
+   ```
+   Esto reemplazará todas las ocurrencias de `palabra_a_reemplazar` con `nueva_palabra` en el archivo `archivo.txt`.
+
+4. **Agregar texto al principio o al final de cada línea:**
+   ```bash
+   sed 's/^/texto_a_agregar_al_principio /' archivo.txt
+   sed 's/$/ texto_a_agregar_al_final/' archivo.txt
+   ```
+   Esto agregará `texto_a_agregar_al_principio` al principio de cada línea y `texto_a_agregar_al_final` al final de cada línea en el archivo `archivo.txt`.
+
+5. **Extraer una sección específica de un archivo:**
+   ```bash
+   sed -n '/patrón_de_inicio/,/patrón_de_fin/p' archivo.txt
+   ```
+   Esto imprimirá solo las líneas entre `patrón_de_inicio` y `patrón_de_fin` en el archivo `archivo.txt`.
+
+6. **Contar el número de líneas en un archivo:**
+   ```bash
+   sed -n '$=' archivo.txt
+   ```
+   Esto imprimirá el número total de líneas en el archivo `archivo.txt`.
 
 ### Descompresión
 
